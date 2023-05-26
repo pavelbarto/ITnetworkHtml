@@ -1,0 +1,71 @@
+<tbody>        			
+  <tr class="maindata">					
+    <th>
+      <label for="measure">Koncový stav:</label></th>				
+    <td><input type="text" value="" name="measure" id="measure" size="10" class="norm_input" onchange="validateFrm('2','measure')" title="Zjištěný stav měřiče" disabled="disabled"> <span id="measureunit1">kWh</span></td>				
+    <td class="resultcolumn"><div id="resultmeasure"></div></td>			
+  </tr>						
+  <tr class="maindata">				
+    <th>
+      <label for="date">Datum odečtu:</label></th>				
+    <td><input type="text" value="26.5.2023" name="date" id="date" size="10" class="norm_input hasDatepicker" onchange="validateFrm('1a','date')" title="Datum odečtu stavu měřiče" disabled="disabled"></td>				
+    <td class="resultcolumn"><div id="resultdate"></div></td>			
+  </tr>			
+  <tr>					
+    <th>
+      <label for="startmeasure">Počáteční stav:</label></th>				
+    <td>
+      <input type="text" value="" name="startmeasure" id="startmeasure" size="10" class="norm_input" title="Stav měřiče z posledního měření" disabled=""> <span id="measureunit2">kWh</span></td>				
+    <td></td>			
+  </tr>			
+  <tr>					
+    <th>
+      <label for="startdate">Datum počátečního stavu:</label></th>				
+    <td><input type="text" value="" name="startdate" id="startdate" size="10" class="norm_input" title="Datum posledního měření" disabled=""></td>				
+    <td></td>			
+  </tr>			
+  <tr>					
+    <th>
+      <label for="note">Poznámka:</label></th>				
+    <td>
+      <input type="text" value="" name="note" id="note" size="10" class="big_input" disabled=""></td>				
+    <td></td>			
+  </tr>			
+  <tr>					
+    <th>
+      <label for="picture">Fotodokumentace:</label></th>				
+    <td><input class="normal_input" id="picture" name="picture" type="file" disabled="" title="Fotografie stavu měřiče"><br><span id="picturepreview"><a href="http://www.mojespotreba.cz/mspotreb/files/0/97_IMG_20120331_205600.jpg" target="blank_"><i class="icon-picture"></i></a>&nbsp;97_IMG_20120331_205600.jpg</span></td>				
+    <td><a class="btn btn-mini" id="photobutton1" onclick="removePicture(0);" title="Smazat fotodokumentaci" disabled=""><i class="icon-remove-circle"></i> Smazat</a></td>			
+  </tr>							
+  <tr>					
+    <th>
+      <label for="nubermeter">Výrobní číslo měřiče:</label></th>				
+    <td><input type="text" value="" name="nubermeter" id="nubermeter" size="10" class="big_input" title="Výrobní číslo uvedené na měřiči" disabled=""></td>				
+    <td></td>			
+  </tr>			
+  <tr>					
+    <th>
+      <label for="changemeter">Výměna měřiče:</label></th>				
+    <td><input type="checkbox" name="changemeter" id="changemeter" value="1" onchange="showchangemeter();" disabled="disabled" readonly="readonly" checked="checked">
+      <label for="changemeter" class="tablefrmlabel"> měřič vyměněn za jiný</label></td>				
+    <td></td>			
+  </tr>			
+  <tr class="dispnone changedata" id="newnubermeterfrm" style="display: table-row;">					
+    <th>
+      <label for="newnubermeter">&nbsp;Nové výrobní číslo:</label></th>				
+    <td><input type="text" value="" name="newnubermeter" id="newnubermeter" size="10" class="big_input" disabled="disabled" title="Výrobní číslo uvedené na novém měřiči"></td>				
+    <td></td>				
+  </tr>			
+  <tr class="dispnone changedata" id="newstartmeasurefrm" style="display: table-row;">					
+    <th>
+      <label for="newstartmeasure">&nbsp;Počáteční stav:</label></th>				
+    <td><input type="text" value="0" name="newstartmeasure" id="newstartmeasure" size="10" class="norm_input" onchange="validateFrm('2','newstartmeasure')" disabled="disabled" title="Stav uvedený na novém měřiči"> <span id="measureunit4">kWh</span></td>				
+    <td class="resultcolumn"><div id="resultnewstartmeasure"></div></td>			
+  </tr>							
+  <tr class="dispnone changedata" id="newpicturefrm" style="display: table-row;">					
+    <th>
+      <label for="newpicture">&nbsp;Fotodokumentace:</label></th>				
+    <td><input class="normal_input" id="newpicture" name="newpicture" type="file" disabled="disabled" title="Fotografie stavu nového měřiče"><br><span id="newpicturepreview"></span></td>				
+    <td><a id="butrem2" class="btn btn-mini" onclick="removePicture(1);" title="Smazat fotodokumentaci" disabled="disabled"><i class="icon-remove-circle"></i> Smazat</a></td>			
+  </tr>							
+</tbody>
